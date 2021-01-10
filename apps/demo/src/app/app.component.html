@@ -1,0 +1,19 @@
+<h2>Create</h2>
+
+<div class="left">
+  <input type="text" placeholder="Task" #task>
+  <input type="text"  placeholder="text" #text>
+  <button (click)="addTask(task.value,text.value)">Add Task</button>
+</div>
+
+<div class="right" *ngIf="todo">
+  <h3>ToDo</h3>
+  <ul *ngFor="let list of todo | async; let i = index">
+      <h2>{{list.task }} </h2>
+      <h4>{{list.text}}</h4>
+      <button (click)="removeTask(i)">delete</button>
+      <hr>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>

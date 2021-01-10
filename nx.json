@@ -29,6 +29,13 @@
     "ngrx-practice-e2e": {
       "tags": [],
       "implicitDependencies": ["ngrx-practice"]
+    },
+    "demo": {
+      "tags": []
+    },
+    "demo-e2e": {
+      "tags": [],
+      "implicitDependencies": ["demo"]
     }
   }
 }
